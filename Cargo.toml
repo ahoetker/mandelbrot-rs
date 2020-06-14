@@ -1,0 +1,17 @@
+[package]
+name = "mandelbrot_py"
+version = "0.1.0"
+authors = ["Andrew Hoetker <ahoetker@me.com>"]
+edition = "2018"
+
+[lib]
+name = "mandelbrot_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+mandelbrot_common = "0.1.1"
+numpy = "0.9"
+
+[dependencies.pyo3]
+version = "0.10.1"
+features = ["extension-module"]
