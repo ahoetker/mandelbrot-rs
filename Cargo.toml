@@ -3,6 +3,7 @@ name = "mandelbrot_py"
 version = "0.1.0"
 authors = ["Andrew Hoetker <ahoetker@me.com>"]
 edition = "2018"
+description = "Python bindings to mandelbrot Rust crate"
 
 [lib]
 name = "mandelbrot_rs"
@@ -15,3 +16,23 @@ numpy = "0.9"
 [dependencies.pyo3]
 version = "0.10.1"
 features = ["extension-module"]
+
+
+[package.metadata.maturin]
+classifier = [
+  "Programming Language :: Rust",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+maintainer = "Andrew Hoetker"
+maintainer-email = "ahoetker@me.com"
+requires-python = ">=3.5"
+project-url = ["https://github.com/ahoetker/mandelbrot-rs/"]
