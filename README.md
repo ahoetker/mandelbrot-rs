@@ -1,5 +1,7 @@
 # mandelbrot_rs
 
+[![Build Status](https://travis-ci.com/ahoetker/mandelbrot-rs.svg?branch=master)](https://travis-ci.com/ahoetker/mandelbrot-rs)
+
 `mandelbrot_rs` is a Python package for generating images of the Mandelbrot set. This project provides
 Python bindings to the Rust demo crate [mandelbrot_common](https://github.com/ahoetker/mandelbrot) by the same author.
 
