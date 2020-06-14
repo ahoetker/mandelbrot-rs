@@ -12,7 +12,7 @@ Python bindings to the Rust demo crate [mandelbrot_common](https://github.com/ah
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-pip install mandelbrot_rs
+pip install mandelbrot_py
 ```
 
 ### macOS or Windows
