@@ -26,7 +26,6 @@ matrix:
       install: true
       env:
         - PYPI_USERNAME=ahoetker
-        - secure: "f+6wC9w8Tn1CkcMEH+NmWwz185Ggtz86ztAnVL9IQMc6AIRZJTJ2xXnfz2DR1FKvG9j3uiZwLFOu7ogrx0K8vfUQlorBm7H9Lg2/6r+1zYXjx+dzVxYR4ght6Jn3MHrTyj0uQUzkxdZ9KHWhOFEESM0wHwpHzKNHGebIwO+kuJAVNvb5Y2JPIE19zO2hzzNGd1/Nw5YgZYX+uh1a1LEilGUau3xm0LcN7+r4WWm0ohbGkcdcnndqdqrXAJ0QsbpHF0jFfBDbvUVJRfZ23182jofKf53lTpHFidDBEIiQnBbnLpl4omSVf1RDO7gHFKZR827ltigUJvGDy8sWVSwyrUMLwjThYdD+CBFpriqy+RrVj8hiya5/9PVN5LBZ2zaPExLFadj9PAC6UOit0aL7RsiaDTC4LlWx2fuSMObO94IHRJUc9rJtpt4g68270V0t8leoZPHh7nvy8wK0Ip0/jls1X7mSaJUHJDip3r8Sioq3mFLyli98LCBTCf+W17voq/5rwoydQNQQtLmmgf4CP+6AwRqkkTr4XJjUkLMVzivKXrvH7Dxzrx7sI3rPdQ4EewEi6Vhsvt5IBfLkxHSUaNS78eRkcEliOJCkOG9qbOKImT4j0W98GrLzaejeLD2Vw6aehG1ru1DaEz6TISXR49ony2gAmnFobyD1OxHUrs0="
       script:
         - sudo docker build -f manylinux2010.dockerfile -t mandelbrot_rs_manylinux2010:latest .
         - sudo docker run -e NO_SDIST="1" -e MANYLINUX_VERSION="2010" -e TRAVIS_TAG="$TRAVIS_TAG" -e PYPI_USERNAME="$PYPI_USERNAME" -e MATURIN_PASSWORD="$PYO3_PACK_PASSWORD" -v $PWD:/tmp/src mandelbrot_rs_manylinux2010:latest
@@ -37,7 +36,6 @@ matrix:
       install: true
       env:
         - PYPI_USERNAME=ahoetker
-        - secure: "f+6wC9w8Tn1CkcMEH+NmWwz185Ggtz86ztAnVL9IQMc6AIRZJTJ2xXnfz2DR1FKvG9j3uiZwLFOu7ogrx0K8vfUQlorBm7H9Lg2/6r+1zYXjx+dzVxYR4ght6Jn3MHrTyj0uQUzkxdZ9KHWhOFEESM0wHwpHzKNHGebIwO+kuJAVNvb5Y2JPIE19zO2hzzNGd1/Nw5YgZYX+uh1a1LEilGUau3xm0LcN7+r4WWm0ohbGkcdcnndqdqrXAJ0QsbpHF0jFfBDbvUVJRfZ23182jofKf53lTpHFidDBEIiQnBbnLpl4omSVf1RDO7gHFKZR827ltigUJvGDy8sWVSwyrUMLwjThYdD+CBFpriqy+RrVj8hiya5/9PVN5LBZ2zaPExLFadj9PAC6UOit0aL7RsiaDTC4LlWx2fuSMObO94IHRJUc9rJtpt4g68270V0t8leoZPHh7nvy8wK0Ip0/jls1X7mSaJUHJDip3r8Sioq3mFLyli98LCBTCf+W17voq/5rwoydQNQQtLmmgf4CP+6AwRqkkTr4XJjUkLMVzivKXrvH7Dxzrx7sI3rPdQ4EewEi6Vhsvt5IBfLkxHSUaNS78eRkcEliOJCkOG9qbOKImT4j0W98GrLzaejeLD2Vw6aehG1ru1DaEz6TISXR49ony2gAmnFobyD1OxHUrs0="
       script:
         - sudo docker build -f manylinux2014.dockerfile -t mandelbrot_rs_manylinux2014:latest .
         - sudo docker run -e MANYLINUX_VERSION="2014" -e TRAVIS_TAG="$TRAVIS_TAG" -e PYPI_USERNAME="$PYPI_USERNAME" -e MATURIN_PASSWORD="$PYO3_PACK_PASSWORD" -v $PWD:/tmp/src mandelbrot_rs_manylinux2014:latest
@@ -48,7 +46,6 @@ matrix:
       install: true
       env:
         - PYPI_USERNAME=ahoetker
-        - secure: "f+6wC9w8Tn1CkcMEH+NmWwz185Ggtz86ztAnVL9IQMc6AIRZJTJ2xXnfz2DR1FKvG9j3uiZwLFOu7ogrx0K8vfUQlorBm7H9Lg2/6r+1zYXjx+dzVxYR4ght6Jn3MHrTyj0uQUzkxdZ9KHWhOFEESM0wHwpHzKNHGebIwO+kuJAVNvb5Y2JPIE19zO2hzzNGd1/Nw5YgZYX+uh1a1LEilGUau3xm0LcN7+r4WWm0ohbGkcdcnndqdqrXAJ0QsbpHF0jFfBDbvUVJRfZ23182jofKf53lTpHFidDBEIiQnBbnLpl4omSVf1RDO7gHFKZR827ltigUJvGDy8sWVSwyrUMLwjThYdD+CBFpriqy+RrVj8hiya5/9PVN5LBZ2zaPExLFadj9PAC6UOit0aL7RsiaDTC4LlWx2fuSMObO94IHRJUc9rJtpt4g68270V0t8leoZPHh7nvy8wK0Ip0/jls1X7mSaJUHJDip3r8Sioq3mFLyli98LCBTCf+W17voq/5rwoydQNQQtLmmgf4CP+6AwRqkkTr4XJjUkLMVzivKXrvH7Dxzrx7sI3rPdQ4EewEi6Vhsvt5IBfLkxHSUaNS78eRkcEliOJCkOG9qbOKImT4j0W98GrLzaejeLD2Vw6aehG1ru1DaEz6TISXR49ony2gAmnFobyD1OxHUrs0="
       script:
         - sudo docker build -f manylinux1.dockerfile -t mandelbrot_rs_manylinux1:latest .
         - sudo docker run -e NO_SDIST="1" -e MANYLINUX_VERSION="1" -e TRAVIS_TAG="$TRAVIS_TAG" -e PYPI_USERNAME="$PYPI_USERNAME" -e MATURIN_PASSWORD="$PYO3_PACK_PASSWORD" -v $PWD:/tmp/src mandelbrot_rs_manylinux1:latest
