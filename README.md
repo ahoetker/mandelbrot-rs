@@ -1,6 +1,7 @@
 # mandelbrot_rs
 
-`mandelbrot_rs` is a Python package for generating images of the Mandelbrot set. 
+`mandelbrot_rs` is a Python package for generating images of the Mandelbrot set. This project provides
+Python bindings to the Rust demo crate [mandelbrot_common](https://github.com/ahoetker/mandelbrot) by the same author.
 
 ## Installation
 
